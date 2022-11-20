@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(gnss-sdr)
+project(gnss_sdr)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -50,8 +50,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
-  gnss_synchro.msg
-  observables.msg
+  GNSSSynchro.msg
+  Observables.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -69,10 +69,10 @@ add_message_files(
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##

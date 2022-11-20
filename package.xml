@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>gnss-sdr</name>
+  <name>gnss_sdr</name>
   <version>0.0.0</version>
   <description>The gnss-sdr package</description>
 
