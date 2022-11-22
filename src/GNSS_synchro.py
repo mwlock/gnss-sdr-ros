@@ -1,30 +1,26 @@
 import socket
 
+import monitor_pvt_pb2
 import gnss_synchro_pb2
+from PyQt5.QtNetwork import QUdpSocket, QHostAddress
 
 class Gnss_Synchro_UDP:
 
-    def __init__(self, ip = "127.0.0.1", udp_port :int =1234, buffer_size :int = 1500):
+    def __init__(self, ip = "127.0.0.1", udp_port :int = 1234, buffer_size :int = 1500):
 
-        self.UDP_IP = ip    
+        self.UDP_IP = ip
         self.UDP_PORT = udp_port
         self.buffer_size = buffer_size
 
         # Create socket and bind to address
-        self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.sock.bind((self.UDP_IP, self.UDP_PORT))
+        self.udp_socket = QUdpSocket()
+        self.udp_socket.bind(QHostAddress.LocalHost, self.UDP_PORT)
 
     def receive(self):
-        gnss_synchro = gnss_synchro_pb2.Observables()
-        data, addr = self.sock.recvfrom(self.buffer_size)
-        # print(data)
-
-        gnss_synchro.ParseFromString(data)
-
-        # try:
-        #     obs = gnss_synchro.ParseFromString(data)
-        #     print(obs)
-        # except:
-        #     print("Error parsing message")
-
-        return gnss_synchro
+        while not self.udp_socket.hasPendingDatagrams():
+            pass
+        datagram = self.udp_socket.receiveDatagram(self.udp_socket.pendingDatagramSize())
+        output = gnss_synchro_pb2.Observables()
+        output.ParseFromString(datagram.data().data())
+        # print(f"output is: {output}")
+        return output

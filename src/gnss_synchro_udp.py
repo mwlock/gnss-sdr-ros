@@ -17,7 +17,7 @@ def talker():
 
     # Create and connect to local UDP endpoint
     UDP_IP = "127.0.0.1"
-    UDP_PORT = 1111
+    UDP_PORT = 1234
     gnsssynchro = Gnss_Synchro_UDP(udp_port=UDP_PORT, ip=UDP_IP)
     rospy.loginfo(f"UDP target : {UDP_IP}:{UDP_PORT}")
     rospy.loginfo("Opened UDP socket")

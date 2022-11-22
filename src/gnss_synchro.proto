@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2018-2020 Carles Fernandez-Prades <carles.fernandez@cttc.es>
 syntax = "proto3";
 
-package gnss_sdr;
+package gnss_sdr.test;
 
 /* GnssSynchro represents the processing measurements at a given time taken by a given processing channel */
 message GnssSynchro {
