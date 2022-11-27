@@ -19,5 +19,5 @@ class Gnss_ROS:
     def parse_pvt(datagram: QNetworkDatagram) -> monitor_pvt_pb2.MonitorPvt:
         """ Parse a MonitorPvt message from a QNetworkDatagram """
         output = monitor_pvt_pb2.MonitorPvt()
-        output.ParseFromString(datagram().data().data())
+        output.ParseFromString(datagram.data().data())
         return output

@@ -58,7 +58,7 @@ def publish_gnss_synchro(observables : gnss_synchro_pb2.Observables, pub : rospy
 
 def synchro_ROS():
 
-    pub = rospy.Publisher('gnss-synchro', Observables, queue_size=10)
+    pub = rospy.Publisher('gnss-synchro/syncrho', Observables, queue_size=10)
     rospy.init_node('GNSSSynchro_UDP', anonymous=True)
     rate = rospy.Rate(10) # 10hz
 

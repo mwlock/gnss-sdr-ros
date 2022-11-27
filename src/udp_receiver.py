@@ -2,7 +2,7 @@ from PyQt5.QtNetwork import QUdpSocket, QHostAddress, QNetworkDatagram
 
 class UDP_Receiver:
 
-    def __init__(self, ip = "127.0.0.1", udp_port :int = 1234):
+    def __init__(self, udp_port :int, ip = "127.0.0.1"):
 
         # Set up UDP socket
         self.UDP_IP = ip

@@ -52,6 +52,7 @@ add_message_files(
   FILES
   GNSSSynchro.msg
   Observables.msg
+  MonitorPvt.msg
 )
 
 ## Generate services in the 'srv' folder
