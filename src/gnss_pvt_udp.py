@@ -63,6 +63,7 @@ def pvt_ROS():
         while not rospy.is_shutdown():
 
             datagram = udp_receiver.receive_datagram()
+            # print(datagram.data().data())
             msg = Gnss_ROS.parse_pvt(datagram)
 
             publish_gnss_pvt(msg, pub)

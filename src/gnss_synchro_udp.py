@@ -72,8 +72,9 @@ def synchro_ROS():
     with UDP_Receiver(ip=UDP_IP, udp_port=UDP_PORT) as udp_receiver:
         while not rospy.is_shutdown():
 
-            data = udp_receiver.receive_datagram()
-            msg = Gnss_ROS.parse_synchro(data)
+            datagram = udp_receiver.receive_datagram()
+            # print(datagram.data().data())
+            msg = Gnss_ROS.parse_synchro(datagram)
 
             publish_gnss_synchro(msg, pub)
 

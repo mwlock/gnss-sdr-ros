@@ -1,5 +1,3 @@
-import socket
-
 from proto import gnss_synchro_pb2, monitor_pvt_pb2
 from PyQt5.QtNetwork import QUdpSocket, QHostAddress, QNetworkDatagram
 

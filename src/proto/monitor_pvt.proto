@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package gnss_sdr;
+package gnss_sdr.pvt_message;
 
 /* MonitorPvt represents a search query, with pagination options to
  * indicate which results to include in the response. */
