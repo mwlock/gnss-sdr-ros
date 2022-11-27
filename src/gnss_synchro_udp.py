@@ -50,7 +50,7 @@ def publish_gnss_synchro(observables : gnss_synchro_pb2.Observables, pub : rospy
         gnss_synchro.rx_time = synchro.rx_time
         gnss_synchro.flag_valid_pseudorange = synchro.flag_valid_pseudorange
         gnss_synchro.interp_tow_ms = synchro.interp_tow_ms
-        gnss_synchro.flag_PLL_180_deg_phase_locked = synchro.flag_PLL_180_deg_phase_locked
+        gnss_synchro.flag_pll_180_deg_phase_locked = synchro.flag_PLL_180_deg_phase_locked
 
         publish_observables.observable.append(gnss_synchro)
 
@@ -58,7 +58,7 @@ def publish_gnss_synchro(observables : gnss_synchro_pb2.Observables, pub : rospy
 
 def synchro_ROS():
 
-    pub = rospy.Publisher('gnss-synchro/syncrho', Observables, queue_size=10)
+    pub = rospy.Publisher('gnss/syncrho', Observables, queue_size=10)
     rospy.init_node('GNSSSynchro_UDP', anonymous=True)
     rate = rospy.Rate(10) # 10hz
 

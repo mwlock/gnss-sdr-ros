@@ -48,7 +48,7 @@ def publish_gnss_pvt(pvt : monitor_pvt_pb2.MonitorPvt, pub : rospy.Publisher):
 
 def pvt_ROS():
 
-    pub = rospy.Publisher('/gnss-synchro/pvt', MonitorPvt, queue_size=10)
+    pub = rospy.Publisher('/gnss/pvt', MonitorPvt, queue_size=10)
     rospy.init_node('GNSSPVT_UDP', anonymous=True)
     rate = rospy.Rate(10) # 10hz
 

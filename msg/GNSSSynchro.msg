@@ -1,7 +1,7 @@
 # GnssSynchro represents the processing measurements at a given time taken by a given processing channel
 # Based on https://github.com/gnss-sdr/gnss-sdr/blob/next/docs/protobuf/gnss_synchro.proto
 
-Header header
+std_msgs/Header header
 
 string system   # GNSS constellation: "G" for GPS, "R" for Glonass, "S" for SBAS, "E" for Galileo and "C" for Beidou.
 string signal   # GNSS signal: "1C" for GPS L1 C/A, "1B" for Galileo E1b/c, "1G" for Glonass L1 C/A, "2S" for GPS L2 L2C(M), "2G" for Glonass L2 C/A, "L5" for GPS L5 and "5X" for Galileo E5a
@@ -33,5 +33,5 @@ float64 pseudorange_m  # Pseudorange computation, in m
 float64 rx_time  # Receiving time after the start of the week, in s
 bool flag_valid_pseudorange  # Pseudorange computation status
 float64 interp_tow_ms  # Interpolated time of week, in ms
-bool flag_PLL_180_deg_phase_locked # PLL lock at 180º
+bool flag_pll_180_deg_phase_locked # PLL lock at 180º
 

@@ -1,5 +1,5 @@
 #  MonitorPvt represents a search query, with pagination options to indicate which results to include in the response
-Header header
+std_msgs/Header header
 
 uint32 tow_at_current_symbol_ms  # Time of week of the current symbol, in ms
 uint32 week  # PVT GPS week
