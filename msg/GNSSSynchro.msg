@@ -6,7 +6,7 @@ Header header
 string system   # GNSS constellation: "G" for GPS, "R" for Glonass, "S" for SBAS, "E" for Galileo and "C" for Beidou.
 string signal   # GNSS signal: "1C" for GPS L1 C/A, "1B" for Galileo E1b/c, "1G" for Glonass L1 C/A, "2S" for GPS L2 L2C(M), "2G" for Glonass L2 C/A, "L5" for GPS L5 and "5X" for Galileo E5a
 
-uint32 PRN          # GNSS satellite PRN number
+uint32 prn          # GNSS satellite PRN number
 int32 channel_id    # GNSS channel number
 
 float64 acq_delay_samples  # Coarse code delay estimation, in samples
