@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(gnss_sdr_msgs)
+project(gnss_sdr2)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -32,9 +32,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   DEPENDENCIES builtin_interfaces std_msgs
 )
 
-# install(
-#   FILES my_mapping_rules.yaml
-#   DESTINATION share/${PROJECT_NAME})
+install(
+  FILES my_mapping_rules.yaml
+  DESTINATION share/${PROJECT_NAME})
 
 ament_export_dependencies(rosidl_default_runtime)
 

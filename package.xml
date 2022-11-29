@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>gnss_sdr2_msgs</name>
+  <name>gnss_sdr2</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
   <maintainer email="matthewwilliamlock@gmail.com">master</maintainer>
@@ -22,7 +22,7 @@
 
   <export>
     <build_type>ament_cmake</build_type>
-    <!-- <ros1_bridge mapping_rules="my_mapping_rules.yaml"/> -->
+    <ros1_bridge mapping_rules="my_mapping_rules.yaml"/>
   </export>
   
 </package>

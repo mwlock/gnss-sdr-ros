@@ -1,4 +1,4 @@
 -
   ros1_package_name: 'gnss_sdr'
-  ros2_package_name: 'gnss_sdr_2'
+  ros2_package_name: 'gnss_sdr2'
 
