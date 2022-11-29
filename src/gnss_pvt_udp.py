@@ -3,7 +3,7 @@
 import rospy
 import socket
 
-from gnss_sdr.msg import MonitorPvt
+from gnss_sdr_msgs.msg import MonitorPvt
 
 from GNSS_Ros import Gnss_ROS
 from udp_receiver import UDP_Receiver

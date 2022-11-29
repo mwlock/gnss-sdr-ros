@@ -3,8 +3,8 @@
 import rospy
 import socket
 
-from gnss_sdr.msg import GNSSSynchro
-from gnss_sdr.msg import Observables
+from gnss_sdr_msgs.msg import GNSSSynchro
+from gnss_sdr_msgs.msg import Observables
 from std_msgs.msg import String
 
 from GNSS_Ros import Gnss_ROS

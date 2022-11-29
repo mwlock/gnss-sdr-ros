@@ -34,4 +34,3 @@ float64 rx_time  # Receiving time after the start of the week, in s
 bool flag_valid_pseudorange  # Pseudorange computation status
 float64 interp_tow_ms  # Interpolated time of week, in ms
 bool flag_pll_180_deg_phase_locked # PLL lock at 180º
-
