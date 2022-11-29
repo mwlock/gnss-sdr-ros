@@ -5,7 +5,6 @@ import socket
 
 from gnss_sdr.msg import GNSSSynchro
 from gnss_sdr.msg import Observables
-from gnss_sdr.msg import String
 
 from GNSS_Ros import Gnss_ROS
 from udp_receiver import UDP_Receiver
