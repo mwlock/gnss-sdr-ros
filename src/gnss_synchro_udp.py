@@ -20,6 +20,9 @@ def publish_gnss_synchro(observables : gnss_synchro_pb2.Observables, pub : rospy
 
         gnss_synchro = GNSSSynchro()
 
+        # Timestamp the message
+        gnss_synchro.header.stamp = rospy.Time.now()
+
         gnss_synchro.system = synchro.system
         gnss_synchro.signal = synchro.signal
         gnss_synchro.prn = synchro.prn

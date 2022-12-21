@@ -15,6 +15,9 @@ def publish_gnss_pvt(pvt : monitor_pvt_pb2.MonitorPvt, pub : rospy.Publisher):
 
     monitor_pvt = MonitorPvt()
 
+    # Timestamp the message
+    monitor_pvt.header.stamp = rospy.Time.now()
+
     monitor_pvt.tow_at_current_symbol_ms = pvt.tow_at_current_symbol_ms 
     monitor_pvt.week = pvt.week 
     monitor_pvt.rx_time = pvt.rx_time 
